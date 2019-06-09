@@ -1,6 +1,39 @@
-\documentclass{article}
- 
+\documentclass{fresenius}
+
+% include information on the title, author etc
+\input{personalize}
+
+% include the bibliography
+\bibliography{bibliography}
+
+% begin the document
 \begin{document}
-First document. This is a simple example, with no 
-extra parameters or packages included.
+
+\pagestyle{empty} % suppress headers for the pre-content pages
+
+% titlepage
+\maketitle
+\clearpage
+
+% table of contents
+\tableofcontents
+\setcounter{page}{2}
+\clearpage
+
+% main content
+\pagestyle{plain} % show chapter titles as headings
+
+\input{chapters/chapter01.tex}
+\input{chapters/chapter02.tex}
+\input{chapters/chapter03.tex}
+
+% appendix & references
+\appendix
+\input{appendix}
+\clearpage
+
+\addcontentsline{toc}{section}{Literatur}
+\linespread{1}
+\printbibliography
+
 \end{document}
