@@ -1,7 +1,8 @@
 \documentclass{fresenius}
 
-% include information on the title, author etc
-\input{personalize}
+\newcommand{\atitle}{Implementierung von Veränderungsprozessen durch Hoshin Kanri}
+\newcommand{\amodule}{Theoriebildung aus interdisziplinärer Sicht (M260)}
+\newcommand{\aauthor}{Michael Kuehl\xspace}
 
 % include the bibliography
 \bibliography{bibliography}
@@ -11,29 +12,17 @@
 
 \pagestyle{empty} % suppress headers for the pre-content pages
 
-% titlepage
-\maketitle
-\clearpage
-
-% table of contents
-\tableofcontents
-\setcounter{page}{2}
-\clearpage
+% title, toc etc
+\input{front_and_back/front_matter}
 
 % main content
 \pagestyle{plain} % show chapter titles as headings
 
-\input{chapters/chapter01.tex}
-\input{chapters/chapter02.tex}
-\input{chapters/chapter03.tex}
+\input{chapters/introduction}
+\input{chapters/chapter01}
+\input{chapters/closing}
 
-% appendix & references
-\appendix
-\input{appendix}
-\clearpage
-
-\addcontentsline{toc}{section}{Literatur}
-\linespread{1}
-\printbibliography
+% appendix, literature etc
+\input{front_and_back/back_matter}
 
 \end{document}
